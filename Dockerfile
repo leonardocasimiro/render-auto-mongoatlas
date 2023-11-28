@@ -13,6 +13,7 @@ RUN npm ci
 RUN npm run build
 
 # Le indicamos variables de entorno (OJO sensibles NO)
+EXPOSE 3000
 ENV PORT=3000
 ENV STATIC_FILES_PATH=./public
 ENV API_MOCK=true
