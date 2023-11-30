@@ -2,35 +2,37 @@
 ## _render-auto-mongoatlas_
 ## Introducción
 
-> Para esta práctica se sube a render la rest API de la practica anterior, la 4.
-Para ello hemos hecho un repositorio "render-manual-mock". A pesar del nombre, modificando una variable de entorno podemos pasar de datos mock a datos en mongo Atlas
+> Para esta práctica se sube a render la rest API de la practica anterior, la 4. Pero en un contenedor de docker
+Para ello hemos hecho un repositorio "render-auto-mongoatlas". A pesar del nombre, modificando una variable de entorno podemos pasar de datos mock a datos en mongo Atlas
 
 Repo:
-- https://github.com/leonardocasimiro/render-manual-mock.
+- https://github.com/leonardocasimiro/render-auto-mongoatlas
 
 El enlace de render 
-- https://render-manual-mock.onrender.com
+- https://render-auto-mongoatlas.onrender.com
 
 Si se chequea el enlace de render, este tirará de los datos subidos en Mongo Atlas.
-![Alt text](./img/get_by_id.JPG)
+https://render-auto-mongoatlas.onrender.com/api/houses
+
+![Alt text](./img/render1.JPG)
 
 
 Si deseas ver datos mock, debes cambiar la variable de entorno en render
-![Alt text](./img/image.png)
+![Alt text](./img/variables_entorno.jpg)
 
 ## Acciones
 
-> Se crea en render un WEB SERVICE. Basado en Node. A este render se le indica el repo, region de alojamiento. Repositorio y rama de este.
+> Se crea en render un WEB SERVICE. Basado en Docker. A este render se le indica el repo, region de alojamiento. Repositorio y rama de este.
 
-Como comando de construccion se le indica:
-- npm install
+> Importante, en los settings hay que indicar el Dockerfile
 
-Comando start
-- npm start
+> Dockerfile. Es aqui donde indicamos que se baje el node determinado para funcionar y los comandos 
+# Hacemos el install y el build
+RUN npm ci
+RUN npm run build
 
 > Al subir el repo a gitHub como está sincronizado con este, render hara de forma automatica (se lo hemos indicado así) un Deploy.
 Este deploy consiste en:
 - Sincronizarse, de hecho es lo que activa el deploy
-- REaliza un bulit con el comando que le hayamos pasado.
-- y arranca la app con npm start
+- Ejecuta los pasos de Dockerfile.
 
