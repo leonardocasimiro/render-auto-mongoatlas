@@ -38,3 +38,22 @@ Este deploy consiste en:
 - Sincronizarse, de hecho es lo que activa el deploy
 - Ejecuta los pasos de Dockerfile.
 
+
+## end Points
+Tiene los siguientes end points:
+
+Get para consultar todos las casas
+
+https://render-manual-mock.onrender.com/api/houses
+
+Get para consultar por id
+
+https://render-manual-mock.onrender.com/api/houses/65624450bec208d2830a55dc
+
+Post para añadir una casa. Se puede usar postman agregando la casa en el body con   formatoJSON
+
+http://localhost:3000/api/houses/
+
+son los end points del modulo 4. Los no GET necesitamos postman …..
+![Alt text](./img/patch.JPG)
+
