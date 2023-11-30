@@ -55,5 +55,9 @@ Post para añadir una casa. Se puede usar postman agregando la casa en el body c
 http://localhost:3000/api/houses/
 
 son los end points del modulo 4. Los no GET necesitamos postman …..
+
+Ejemplo PATCH
 ![Alt text](./img/patch.JPG)
 
+Ejemplo POST
+![Alt text](./img/post.JPG)
